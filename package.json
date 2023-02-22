@@ -1,0 +1,114 @@
+{
+  "name": "flutter-localize",
+  "displayName": "Flutter Localize",
+  "description": "localize flutter strings with .arb files",
+  "version": "1.0.0",
+  "author": {
+    "name": "Omar Kaialy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/omarkaialy/flutter-localize.git"
+  },
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "license": "MIT",
+  "keywords": [
+    "flutter",
+    "dart",
+    "l10n",
+    "r13n",
+    "localization",
+    "arb"
+  ],
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:dart",
+    "workspaceContains:**/*.dart"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "category": "flutter-localize",
+        "command": "flutter-localize.sortArbFiles",
+        "title": "Sort Arb Files Contents A-Z"
+      },
+      {
+        "category": "flutter-localize",
+        "command": "flutter-localize.configureAppLocalizationVAriable",
+        "title": "Set the variable name for `AppLocalizations`"
+      }
+    ],
+    "configuration": {
+      "title": "flutter-localize",
+      "properties": {
+        "flutter-localize.appLocalizationsVariable": {
+          "type": "string",
+          "default": "l10n",
+          "markdownDescription": "Set the variable name for `AppLocalizations`."
+        },
+        "flutter-localize.yamlFile": {
+          "type": "string",
+          "default": "l10n.yaml",
+          "enum": [
+            "l10n.yaml",
+            "r13n.yaml"
+          ],
+          "markdownDescription": "Set the yaml file for `AppLocalizations`."
+        },
+        "flutter-localize.flutterPubGetEnabled": {
+          "type": "bool",
+          "default": "true",
+          "markdownDescription": "If enabled, run the `flutter.packages.get` command of the [Dart extension](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code)."
+        },
+        "flutter-localize.sortFilesContent": {
+          "type": "bool",
+          "default": "true",
+          "markdownDescription": "If enabled, sort keys alphabetically except for `@@locale` is first and `@key` are below their `key`."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/glob": "^8.0.1",
+    "@types/mocha": "^10.0.1",
+    "@types/node": "18.14.0",
+    "@types/parsimmon": "^1.10.6",
+    "@types/sinon": "10.0.13",
+    "@types/vscode": "^1.75.1",
+    "@typescript-eslint/eslint-plugin": "^5.52.0",
+    "@typescript-eslint/parser": "^5.52.0",
+    "@vscode/test-electron": "^2.2.3",
+    "chai": "^4.3.7",
+    "eslint": "^8.34.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "glob": "^8.1.0",
+    "mocha": "^10.2.0",
+    "parsimmon": "^1.18.1",
+    "prettier": "^2.8.4",
+    "sinon": "^15.0.1",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "yaml": "^2.2.1"
+  }
+}

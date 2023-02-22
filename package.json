@@ -3,6 +3,7 @@
   "displayName": "Flutter Localize",
   "description": "localize flutter strings with .arb files",
   "version": "1.0.0",
+  "publisher": "KmarKaialy",
   "author": {
     "name": "Omar Kaialy"
   },

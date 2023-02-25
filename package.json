@@ -40,7 +40,7 @@
       },
       {
         "category": "flutter-localize",
-        "command": "flutter-localize.configureAppLocalizationVAriable",
+        "command": "flutter-localize.configureAppLocalizationVariable",
         "title": "Set the variable name for `AppLocalizations`"
       }
     ],

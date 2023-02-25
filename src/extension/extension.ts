@@ -47,7 +47,7 @@ export function activate(context: vscode.ExtensionContext): void {
       async (): Promise<void> => sortAndSave()
     ),
     vscode.commands.registerCommand(
-      'flutter-localize.configureAppLocalizationVAriable',
+      'flutter-localize.configureAppLocalizationVariable',
       async (): Promise<void> => {
         await showInputBox('enter the default variable name', '').then(async (val) => {
           await getConfiguration(parentSection).update(appLocalizationsVariableSection, val, true);

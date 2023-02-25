@@ -35,7 +35,7 @@ Initial release of ...
 
 ## Following extension guidelines
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+Ensure that you've read through the extensions guidelines and follow the best practices .
 
 
 ## Working with Markdown

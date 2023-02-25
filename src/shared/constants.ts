@@ -11,9 +11,9 @@ export const yamlFileSection = 'yamlFile';
 export const defaultYamlFile = 'l10n.yaml';
 
 export const flutterPubGetEnabledSection = 'flutterPubGetEnabled';
-export const defaultPubGet = true;
+export const defaultPubGet = false;
 
 export const arbSortSection = 'sortFilesContent';
-export const defaultArbSort = true;
+export const defaultArbSort = false;
 
 export const first = 0;
